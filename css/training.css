@@ -356,7 +356,8 @@ body {
     background-color: #f5f8f6;
     border: 1px solid #dce5df;
     border-radius: 18px;
-    width:900px;
+    width: 90%;
+    max-width: 900px;
     margin: 40px auto 0;
 }
 
@@ -440,4 +441,49 @@ body {
 
     cursor: pointer;
     transition: 0.2s;
+}
+
+.scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #dff4e7;
+
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.scroll-progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #08783e;
+    transition: width 0.1s linear;
+}
+
+.popupvideo video {
+    width: 90%;
+    max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+
+    .training-tips {
+        padding: 25px;
+    }
+
+    .training-tips h1 {
+        font-size: 2rem;
+    }
+
+    .tip {
+        gap: 12px;
+    }
+
+    .tip-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
 }
