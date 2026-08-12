@@ -28,6 +28,7 @@ makes the video invisible on the user's screen.
 function closevideo() {
     let popupvideo = document.getElementById("popupvideo");
     popupvideo.style.display = "none";
+    document.getElementById("video1").pause();
 }
 
 function openvideo2() {
@@ -38,6 +39,7 @@ function openvideo2() {
 function closevideo2() {
     let popupvideo2 = document.getElementById("popupvideo2");
     popupvideo2.style.display = "none";
+    document.getElementById("video2").pause();
 }
 
 function openvideo3() {
@@ -46,6 +48,18 @@ function openvideo3() {
 }
 
 function closevideo3() {
+    document.getElementById("video3").pause();
     let popupvideo3 = document.getElementById("popupvideo3");
     popupvideo3.style.display = "none";
 }
+
+function updateScrollProgress() {
+    let pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    let percentage = (window.scrollY / pageHeight) * 100;
+
+    document.getElementById("scrollProgressBar").style.width =
+        percentage + "%";
+}
+
+window.addEventListener("scroll", updateScrollProgress);
