@@ -4,7 +4,7 @@
 }
 
 .response-card {
-    width: 600px;
+    width: 90%;
     margin: 60px auto;
     padding: 40px;
 
@@ -17,4 +17,21 @@
 
 .response-card h2 {
     margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+
+    .response-card {
+        width: 90%;
+        padding: 25px;
+        margin: 40px auto;
+    }
+
+    .response-header {
+        padding: 0 20px;
+    }
+
+    .response-header h1 {
+        font-size: 2rem;
+    }
 }
